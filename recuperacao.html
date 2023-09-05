@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Recuperação de Senha</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #recuperacao {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #recuperacao input {
+            margin: 10px 0;
+            padding: 5px;
+            width: 90%;
+        }
+
+        #recuperacao button {
+            background-color: #2E8B57;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #recuperacao .cancelar {
+            background-color: #1E90FF;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+
+    <section id="recuperacao">
+        <h2>Esqueci minha senha</h2>
+        <p>Para redefinir a senha informe o usuário ou e-mail cadastrado na sua conta e lhe enviaremos um link com as instruções.</p>
+        <form>
+            <input type="text" placeholder="Usuário ou Email" required>
+            <button type="submit">Próximo</button>
+            <button class="cancelar" onclick="window.location.href='login.html'">Cancelar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

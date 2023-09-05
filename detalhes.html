@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Detalhes do Serviço</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #detalhes {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #detalhes h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #FFC0CB;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="detalhes">
+        <h2>Detalhes do Serviço</h2>
+        <label><strong>Nome do Pet:</strong> Toodles</label>
+        <label><strong>Tipo de Serviço:</strong> Banho Relaxante</label>
+        <label><strong>Hora de Entrada:</strong> 10:00 AM</label>
+        <label><strong>Hora de Saída:</strong> 11:30 AM</label>
+        <label><strong>Observações:</strong> O Toodles comportou-se muito bem durante o banho. Ele adorou o shampoo de lavanda.</label>
+        <label><strong>Valor:</strong> R$50,00</label>
+
+        <button onclick="window.location.href='agendamento.html'">Agendamento</button>
+        <button>Documentos</button>
+        <button>Histórico</button>
+        <button onclick="window.location.href='cadastro-pet.html'">Cadastro de Pet</button>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

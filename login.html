@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Login</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #login {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #login input {
+            margin: 10px 0;
+            padding: 5px;
+            width: 90%;
+        }
+
+        #login button {
+            background-color: #2E8B57;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #login .esqueci-senha {
+            background-color: #1E90FF;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer button {
+            margin-top: 10px;
+            background-color: #FFC0CB;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+        }
+
+        footer button:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="login">
+        <h2>Login</h2>
+        <form onsubmit="return realizarLogin()">
+            <input type="email" placeholder="Email" required id="emailLogin">
+            <input type="password" placeholder="Senha" required id="senhaLogin">
+            <button type="submit">Entrar</button>
+            <button class="esqueci-senha" onclick="window.location.href='recuperacao.html'">Esqueci minha senha</button>
+            <button onclick="window.location.href='cadastroclientes.html'">Registrar</button>
+        </form>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+        <button onclick="window.location.href='inicial.html'">Avançar Sem Login</button>
+    </footer>
+    
+    <script>
+        function realizarLogin() {
+            let email = document.getElementById("emailLogin").value;
+            let senha = document.getElementById("senhaLogin").value;
+
+            let cliente = JSON.parse(localStorage.getItem(email));
+
+            if (cliente && cliente.senha === senha) {
+                alert("Login bem-sucedido!");
+                window.location.href = 'inicial.html';
+            } else {
+                alert("E-mail ou senha incorretos.");
+            }
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

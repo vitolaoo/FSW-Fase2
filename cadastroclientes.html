@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Cadastro de Cliente</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #cadastro-cliente {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #cadastro-cliente input {
+            margin: 10px 0;
+            padding: 5px;
+            width: 90%;
+        }
+
+        #cadastro-cliente button {
+            background-color: #2E8B57;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer button {
+            margin-top: 10px;
+            background-color: #FFC0CB;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+        }
+
+        footer button:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+
+    <section id="cadastro-cliente">
+        <h2>Cadastro de Cliente</h2>
+        <form id="form-cadastro">
+            <input type="text" placeholder="Nome Completo" required id="nomeCliente">
+            <input type="email" placeholder="Email" required id="emailCliente">
+            <input type="password" placeholder="Senha" required id="senhaCliente">
+            <input type="text" placeholder="Telefone" required id="telefoneCliente">
+            <button type="button" onclick="registrarCliente()">Registrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+        <button onclick="window.location.href='login.html'">Voltar para Login</button>
+    </footer>
+
+    <script>
+        function registrarCliente() {
+            let nome = document.getElementById("nomeCliente").value;
+            let email = document.getElementById("emailCliente").value;
+            let senha = document.getElementById("senhaCliente").value;
+            let telefone = document.getElementById("telefoneCliente").value;
+
+            let cliente = {
+                nome: nome,
+                email: email,
+                senha: senha,
+                telefone: telefone
+            };
+
+            // Verificar se o email já está registrado
+            if(localStorage.getItem(email)) {
+                alert("Este email já está registrado.");
+                return;
+            }
+
+            // Armazenar no localStorage
+            localStorage.setItem(email, JSON.stringify(cliente));
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

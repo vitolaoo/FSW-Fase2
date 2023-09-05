@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Pets Cadastrados</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #pets-cadastrados {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #pets-cadastrados h2 {
+            margin-bottom: 20px;
+        }
+
+        .lista-pets {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .lista-pets ul {
+            padding: 0;
+        }
+
+        .lista-pets li {
+            list-style-type: none;
+            margin: 10px 0;
+            background-color: #FFC0CB;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFC0CB;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        footer a:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="pets-cadastrados">
+        <h2>Pets Cadastrados</h2>
+        <div class="lista-pets">
+            <ul id="lista">
+                <!-- Os pets serão adicionados aqui dinamicamente pelo JavaScript -->
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+        <a href="detalhes.html">Voltar para Detalhes</a>
+    </footer>
+    <script>
+        // Simulação da obtenção de pets de um "back-end"
+        const petsCadastrados = JSON.parse(localStorage.getItem('pets')) || [];
+
+        const ulElement = document.getElementById('lista');
+
+        petsCadastrados.forEach(pet => {
+            const liElement = document.createElement('li');
+            liElement.innerHTML = `
+                <strong>Nome:</strong> ${pet.nome} <br>
+                <strong>Tipo:</strong> ${pet.tipo} <br>
+                <strong>Raça:</strong> ${pet.raca} <br>
+                <strong>Peso:</strong> ${pet.peso}kg
+            `;
+            ulElement.appendChild(liElement);
+        });
+    </script>
+</body>
+
+</html>

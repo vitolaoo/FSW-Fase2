@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Inicial</title>
+    <style>
+        /* Estilo para a tag html */
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #inicial {
+            padding-top: 20px;
+            flex: 1;
+        }
+
+        h2 {
+            align-self: flex-start;
+            margin-left: 20px;
+        }
+
+        .caixas {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .caixa {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            width: 200px;
+            margin: 10px;
+            align-items: center;
+        }
+
+        .caixa h3 {
+            background-color: #8B0000;
+            padding: 5px;
+            color: white;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .caixa ul {
+            padding: 0;
+        }
+
+        .caixa li {
+            list-style-type: none;
+            margin: 10px 0;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="inicial">
+        <h2>Bem-vindo à Porto Pets</h2>
+        <div class="caixas">
+            <div class="caixa">
+                <a href="produtos.html"><h3>Produtos</h3></a>
+                <ul>
+                    <li>Kit Banho</li>
+                    <li>Ração Gatos</li>
+                    <li>Brinquedos</li>
+                    <li>Box de Transporte</li>
+                </ul>
+            </div>
+
+            <div class="caixa">
+                <a href="servicos.html"><h3>Serviços</h3></a>
+                <ul>
+                    <li>Banho</li>
+                    <li>Check-up</li>
+                    <li>Tosa</li>
+                    <li>Passeio</li>
+                </ul>
+            </div>
+
+            <div class="caixa">
+                <a href="detalhes.html"><h3>Detalhes do Serviço</h3></a>
+                <ul>
+                    <li class="destaque"><a href="agendamento.html">Agendamento</a></li>
+                    <li class="destaque"><a href="#">Documentos</a></li>
+                    <li class="destaque"><a href="#">Histórico</a></li>
+                    <li class="destaque"><a href="cadastro.html">Cadastro de Pet</a></li>
+                    <li class="destaque"><a href="petscadastrados.html">Visualizar Pets Cadastrados</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

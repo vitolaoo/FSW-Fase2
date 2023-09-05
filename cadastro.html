@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Cadastro de Pet</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #cadastro-pet {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        #cadastro-pet h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFC0CB;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        footer a:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="cadastro-pet">
+        <h2>Cadastro de Pet</h2>
+        <form onsubmit="return registrarPet()">
+            <label for="nome">Nome do Pet:</label>
+            <input type="text" id="nome" name="nome">
+            
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo">
+                <option value="gato">Gato</option>
+                <option value="cachorro">Cachorro</option>
+            </select>
+            
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade">
+            
+            <label for="doencas">Doenças (se houver):</label>
+            <input type="text" id="doencas" name="doencas">
+            
+            <label for="raca">Raça:</label>
+            <input type="text" id="raca" name="raca">
+            
+            <label for="peso">Peso (em kg):</label>
+            <input type="text" id="peso" name="peso">
+
+            <input type="submit" value="Cadastrar Pet" style="margin-top: 20px; padding: 10px 20px; background-color: #FFC0CB; border: none; border-radius: 5px; cursor: pointer;">
+        </form>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+        <a href="detalhes.html">Voltar para Detalhes</a>
+    </footer>
+</body>
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const pet = {
+            nome: e.target.nome.value,
+            tipo: e.target.tipo.value,
+            idade: e.target.idade.value,
+            doencas: e.target.doencas.value,
+            raca: e.target.raca.value,
+            peso: e.target.peso.value
+        };
+        
+        const petsCadastrados = JSON.parse(localStorage.getItem('pets')) || [];
+        petsCadastrados.push(pet);
+        
+        localStorage.setItem('pets', JSON.stringify(petsCadastrados));
+        alert('Pet cadastrado com sucesso!');
+    });
+</script>
+
+</html>

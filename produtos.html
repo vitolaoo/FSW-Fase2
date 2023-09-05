@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Pets - Produtos</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #8B0000;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        #produtos {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+            margin: 20px auto;
+            flex: 1; /* Permite que a seção cresça para ocupar o espaço disponível */
+        }
+
+        #produtos .produto {
+            margin: 15px 0;
+            display: inline-block;
+            width: 45%;
+            text-align: center;
+        }
+
+        #produtos img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #produtos .preco {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #8B0000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Porto Pets</h1>
+    </header>
+    <section id="produtos">
+        <h2>Produtos</h2>
+        <div class="produto">
+            <img src="kitbanho.jpg" alt="Imagem Kit Banho">
+            <p>Kit Banho</p>
+            <p class="preco">R$35,00</p>
+        </div>
+        <div class="produto">
+            <img src="racaogatos.jpg" alt="Imagem Ração Gatos">
+            <p>Ração Gatos</p>
+            <p class="preco">R$40,00</p>
+        </div>
+        <div class="produto">
+            <img src="brinquedos.jpg" alt="Imagem Brinquedos">
+            <p>Brinquedos</p>
+            <p class="preco">R$60,00</p>
+        </div>
+        <div class="produto">
+            <img src="box.jpg" alt="Imagem Box de Transporte">
+            <p>Box de Transporte</p>
+            <p class="preco">R$140,00</p>
+        </div>
+    </section>
+    <footer>
+        <p>308 Negra Arroyo Lane</p>
+        <p>Telefone: (505) 503-4455</p>
+        <p>Email: portopets@gmail.com</p>
+        <p>Horário de Funcionamento: 08:30 - 19:00 (Segunda a Sexta)</p>
+        <p>© 2023 Porto Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
